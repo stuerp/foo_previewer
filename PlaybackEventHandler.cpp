@@ -1,5 +1,5 @@
 
-/** $VER: PlaybackEventHandler.cpp (2022.12.05) P. Stuer **/
+/** $VER: PlaybackEventHandler.cpp (2022.12.11) P. Stuer **/
 
 #include "framework.h"
 
@@ -40,24 +40,27 @@ namespace
             double TrackLength = track->get_length();
 
             // Get the preview start time.
-            if (_SettingsPreviewStartTimeAsPercentage) // as a percentage.
-            {
-                double PreviewStartTimePercentage = GetPreviewStartTimePercentage();
+            StartTimeTypes StartTimeType = GetStartTimeType();
 
-                _PreviewStartTime = ((double)TrackLength * PreviewStartTimePercentage) / 100.0;
+            if (StartTimeType == StartTimeTypes::Seconds)
+            {
+                _PreviewStartTime = GetPreviewStartTimeInSec();
             }
             else
-            if (_SettingsPreviewRandomStartTime) // as a random time.
+            if (StartTimeType == StartTimeTypes::Percentage)
+            {
+                double PreviewStartTimeAsPercentage = GetPreviewStartTimeAsPercentage();
+
+                _PreviewStartTime = ((double)TrackLength * PreviewStartTimeAsPercentage) / 100.0;
+            }
+            else
+            if (StartTimeType == StartTimeTypes::Random)
             {
                 std::random_device RandomGenerator; // Obtain a random number from hardware.
                 std::mt19937 Seed(RandomGenerator()); // Seed the generator.
                 std::uniform_int_distribution<> UniformDistribution(0, (int)TrackLength); // Define the range.
 
                 _PreviewStartTime = UniformDistribution(Seed);
-            }
-            else // from the settings.
-            {
-                _PreviewStartTime = GetPreviewStartTime();
             }
 
             if (_PreviewStartTime > 0.0)

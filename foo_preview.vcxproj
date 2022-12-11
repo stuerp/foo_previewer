@@ -197,9 +197,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PlaybackEventHandler.cpp" />
     <ClCompile Include="Preferences.cpp" />
-    <ClCompile Include="Settings.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Build-FB2KComponent.ps1" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -224,9 +224,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Commands.h" />
+    <ClInclude Include="Preferences.h" />
     <ClInclude Include="Resources.h" />
-    <ClInclude Include="Settings.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Support.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,5 +1,5 @@
 
-/** $VER: Commands.cpp (2022.12.05) P. Stuer **/
+/** $VER: Commands.cpp (2022.12.11) P. Stuer **/
 
 #include "framework.h"
 
@@ -10,6 +10,8 @@
 constexpr GUID PreviewCommandGUID = GUID_PREVIEW_COMMAND;
 constexpr char PreviewCommandName[] = "Preview";
 constexpr char PreviewCommandDescription[] = "Starts preview playback mode.";
+
+bool _IsPreviewing = false;
 
 /// <summary>
 /// Enables or disables Preview playback mode (Command called from the context menu)
@@ -28,7 +30,7 @@ void PreviewCommand(metadb_handle_list_cref)
     if (FocusedIndex == pfc_infinite)
         return;
 
-    // Queue the item that has the focus
+    // Queues the item that has the focus.
     _PlaylistManager->queue_add_item_playlist(PlaylistIndex, FocusedIndex);
 
     PreviewCommand();
@@ -47,7 +49,7 @@ void PreviewCommand()
     {
         double PreviewLength = GetPreviewLength();
 
-        FB2K_console_formatter() << "Previewing track for " << (int)PreviewLength << "s.";
+        FB2K_console_formatter() << "Previewing track for " << PreviewLength << "s.";
 
         static_api_ptr_t<playback_control>()->start(playback_control::track_command_play, false);
     }

@@ -1,5 +1,5 @@
 
-/** $VER: framework.h (2022.12.05) P. Stuer **/
+/** $VER: framework.h (2022.12.11) P. Stuer **/
 
 #pragma once
 
@@ -20,6 +20,6 @@
 #include <random>
 
 #include "Commands.h"
-#include "Settings.h"
+#include "Preferences.h"
 
 #include "Resources.h"

@@ -1,9 +1,11 @@
 
-/** $VER: Commands.h (2022.12.05) P. Stuer **/
+/** $VER: Commands.h (2022.12.11) P. Stuer **/
 
 #pragma once
 
 #include "framework.h"
+
+extern bool _IsPreviewing;
 
 extern const GUID PreviewCommandGUID;
 extern const char PreviewCommandName[];

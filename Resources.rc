@@ -1,5 +1,5 @@
 
-/** $VER: Resources.rc (2022.12.05) P. Stuer **/
+/** $VER: Resources.rc (2022.12.11) P. Stuer **/
 
 #include "Resources.h"
 
@@ -14,10 +14,15 @@ IDD_PREFERENCES dialogex 0, 0, 332, 288
 style DS_SETFONT | WS_CHILD
 font 8, "MS Shell Dlg", 400, 0, 0x0
 {
-    groupbox        "Start time",   IDC_STATIC,             7,  7, 139, 51
-    combobox                        IDC_START_TIME_TYPE,   14, 19, 125, 14, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP 
-    edittext                        IDC_START_TIME,        14, 37,  40, 14, ES_AUTOHSCROLL
-    ltext           "s",            IDC_START_TIME_UNIT,   57, 40,  40,  8
+    groupbox        "Start time",       IDC_STATIC,              7,  7, 139, 51
+    combobox                            IDC_START_TIME_TYPE,    14, 19, 125, 14, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP 
+    edittext                            IDC_START_TIME,         14, 37,  40, 13, ES_AUTOHSCROLL
+    ltext           "s",                IDC_START_TIME_UNIT,    57, 39,  40,  8
+
+    ltext           "Preview length:",  IDC_STATIC,             14, 64,  50,  8
+    edittext                            IDC_PREVIEW_LENGTH,     68, 62,  40, 13, ES_AUTOHSCROLL
+    ltext           "s",                IDC_STATIC,            113, 64,  40,  8
+
 }
 
 VS_VERSION_INFO versioninfo

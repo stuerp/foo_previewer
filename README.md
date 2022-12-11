@@ -21,13 +21,13 @@ or
 
 * Import `foo_preview.fbk2-component` into foobar2000 using "File / Preferences / Components / Install...".
 
-Configure the component using Preferences / Advanced, "Preview Mode" branch:
+Configure the component using Preferences:
 
-* Start time in seconds
-* Random start time
+* Start time type
+    * In seconds
+    * As percentage of track length
+    * Random
 * Preview length in seconds
-* Start time as percentage of track length
-* Start time percentage
 
 ## Developing
 
@@ -89,7 +89,7 @@ branch. Pull requests are warmly welcome.
 
 ## Acknowledgements / Credits
 
-* Peter Pawlowski, for the  [foobar2000](https://www.foobar2000.org/) audio player. ![foobar2000](https://www.foobar2000.org/button-small.png)
+* Peter Pawlowski, for the [foobar2000](https://www.foobar2000.org/) audio player. ![foobar2000](https://www.foobar2000.org/button-small.png).
 * Based on ideas from [foo_preview](https://www.foobar2000.org/components/view/foo_preview) by grimes.
 
 ## Reference Material

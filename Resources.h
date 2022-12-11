@@ -1,5 +1,5 @@
 
-/** $VER: Resources.cpp (2022.12.05) P. Stuer **/
+/** $VER: Resources.cpp (2022.12.11) P. Stuer **/
 
 #pragma once
 
@@ -9,7 +9,7 @@
 /** Component specific **/
 
 #define STR_COMPONENT_NAME      "Preview"
-#define STR_COMPONENT_VERSION   TOSTRING(NUM_FILE_MAJOR) "." TOSTRING(NUM_FILE_MINOR) "." TOSTRING(NUM_FILE_PATCH)
+#define STR_COMPONENT_VERSION   TOSTRING(NUM_FILE_MAJOR) "." TOSTRING(NUM_FILE_MINOR) "." TOSTRING(NUM_FILE_PATCH) "." TOSTRING(NUM_FILE_PRERELEASE)
 #define STR_COMPONENT_FILENAME  "foo_preview.dll"
 
 /** Generic **/
@@ -17,7 +17,7 @@
 #define STR_COMPANY_NAME        TEXT("LionTech")
 #define STR_INTERNAL_NAME       TEXT(STR_COMPONENT_NAME)
 #define STR_COMMENTS            TEXT("Written by P. Stuer")
-#define STR_COPYRIGHT           TEXT("Copyright � 2022 ") STR_COMPANY_NAME TEXT(". All rights reserved.")
+#define STR_COPYRIGHT           TEXT("Copyright (c) 2022 ") STR_COMPANY_NAME TEXT(". All rights reserved.")
 
 #define NUM_FILE_MAJOR          1
 #define NUM_FILE_MINOR          0
@@ -25,7 +25,7 @@
 #define NUM_FILE_PRERELEASE     0
 
 #define STR_FILE_NAME           TEXT(STR_COMPONENT_FILENAME)
-#define STR_FILE_VERSION        TOSTRING(NUM_FILE_MAJOR) TEXT(".") TOSTRING(NUM_FILE_MINOR) TEXT(".") TOSTRING(NUM_FILE_PATCH)) TEXT(".") TOSTRING(NUM_FILE_PRERELEASE))
+#define STR_FILE_VERSION        TOSTRING(NUM_FILE_MAJOR) TEXT(".") TOSTRING(NUM_FILE_MINOR) TEXT(".") TOSTRING(NUM_FILE_PATCH) TEXT(".") TOSTRING(NUM_FILE_PRERELEASE)
 #define STR_FILE_DESCRIPTION    TEXT("Adds a Preview command to a track")
 
 #define NUM_PRODUCT_MAJOR       1
@@ -47,3 +47,4 @@ static constexpr GUID GUID_PREVIEW_COMMAND = { 0xec19f550, 0x9ff2, 0x4a0c, { 0x8
 #define IDC_START_TIME_TYPE     1001
 #define IDC_START_TIME          1002
 #define IDC_START_TIME_UNIT     1003
+#define IDC_PREVIEW_LENGTH      1004
