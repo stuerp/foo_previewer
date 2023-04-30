@@ -21,5 +21,6 @@
 
 #include "Commands.h"
 #include "Preferences.h"
-
 #include "Resources.h"
+
+constexpr const char * _ComponentName = STR_COMPONENT_NAME;

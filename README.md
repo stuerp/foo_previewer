@@ -1,25 +1,24 @@
 
-# foo_preview
+# foo_previewer
 
-[foo_preview](https://github.com/stuerp/foo_preview/releases) is a [foobar2000](https://www.foobar2000.org/) component that adds a **Preview** playback mode.
+[foo_previewer](https://github.com/stuerp/foo_previewer/releases) is a [foobar2000](https://www.foobar2000.org/) component that adds a **Preview** playback mode.
 
 ## Features
 
-* Supports foobar2000 2.0 (32-bit and 64-bit version)
 * Supports dark mode.
 
 ## Requirements
 
-* Microsoft Windows 10 or later
-* [foobar2000](https://www.foobar2000.org/download) v2.0 or later
+* Tested on Microsoft Windows 10 and later.
+* [foobar2000](https://www.foobar2000.org/download) v1.6.16 or later (32 or 64-bit). ![foobar2000](https://www.foobar2000.org/button-small.png)
 
 ## Getting started
 
-* Double-click `foo_preview.fbk2-component`.
+* Double-click `foo_previewer.fbk2-component`.
 
 or
 
-* Import `foo_preview.fbk2-component` into foobar2000 using "File / Preferences / Components / Install...".
+* Import `foo_previewer.fbk2-component` into foobar2000 using "File / Preferences / Components / Install...".
 
 Configure the component using Preferences:
 
@@ -31,19 +30,19 @@ Configure the component using Preferences:
 
 ## Developing
 
-The code builds out-of-the box with Visual Studio.
+The code builds out-of-the box with Visual Studio 2022.
 
 ### Requirements
 
-To build the code:
+To build the code you need:
 
-* [Microsoft Visual Studio 2022 Community Edition](https://visualstudio.microsoft.com/downloads/) or later.
-* [foobar2000 SDK](https://www.foobar2000.org/SDK) 2022-20-20.
-* [Windows Template Library (WTL)](https://github.com/Win32-WTL/WTL) 10.0.10320.
+* [Microsoft Visual Studio 2022 Community Edition](https://visualstudio.microsoft.com/downloads/) or later
+* [foobar2000 SDK](https://www.foobar2000.org/SDK) 2023-04-18
+* [Windows Template Library (WTL)](https://github.com/Win32-WTL/WTL) 10.0.10320
 
 To create the deployment package:
 
-* [PowerShell 7.2](https://github.com/PowerShell/PowerShell) or later.
+* [PowerShell 7.2](https://github.com/PowerShell/PowerShell) or later
 
 ### Setup
 
@@ -53,20 +52,24 @@ Create the following directory structure:
         WTL10_10320
     bin
         x86
-    foo_preview
+    foo_previewer
     out
     sdk
 
 * `3rdParty/WTL10_10320` contains WTL 10.0.10320.
-* `bin` contains a portable version of foobar2000 2.0 for debugging purposes.
-* `bin/x86` contains a portable version of foobar2000 1.6 for debugging purposes.
-* `foo_preview` contains the [Git](https://github.com/stuerp/foo_preview) repository.
+* `bin` contains a portable version of foobar2000 64-bit for debugging purposes.
+* `bin/x86` contains a portable version of foobar2000 32-bit for debugging purposes.
+* `foo_previewer` contains the [Git](https://github.com/stuerp/foo_previewer) repository.
 * `out` receives a deployable version of the component.
 * `sdk` contains the foobar2000 SDK.
 
 ### Building
 
-Open `foo_preview.sln` with Visual Studio and build the solution.
+Open `foo_previewer.sln` with Visual Studio and build the solution.
+
+### Packaging
+
+To create the component first build the x86 configuration and next the x64 configuration.
 
 ## Contributing
 
@@ -75,17 +78,14 @@ branch. Pull requests are warmly welcome.
 
 ## Change Log
 
+### v1.0.1, 2023-04-30, *"There can be only one"*
+
+* Renamed the component to avoid being confused with [foo_preview](https://www.foobar2000.org/components/view/foo_preview) by grimes. Please manually uninstall the previous foo_preview component before installing this version to avoid having duplicated 'Preview' commands.
+* Recompiled with [foobar2000 SDK](https://www.foobar2000.org/SDK) 2023-04-18.
+
 ### v1.0.0, 2022-11-01, *"Scratchin' the itch"*
 
 * Initial release
-
-## Build
-
-* Builds with Microsoft Visual Studio Community 2022.
-
-## Reference
-
-* [foobar2000 Development](https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Development:Overview)
 
 ## Acknowledgements / Credits
 
@@ -93,6 +93,12 @@ branch. Pull requests are warmly welcome.
 * Based on ideas from [foo_preview](https://www.foobar2000.org/components/view/foo_preview) by grimes.
 
 ## Reference Material
+
+### foobar2000
+
+* [foobar2000 Development](https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Development:Overview)
+
+### Windows
 
 * [Desktop app user interface](https://learn.microsoft.com/en-us/windows/win32/windows-application-ui-development)
 * [Windows User Experience Interaction Guidelines](https://learn.microsoft.com/en-us/windows/win32/uxguide/guidelines)
@@ -103,9 +109,9 @@ branch. Pull requests are warmly welcome.
 
 ## Links
 
-* Home page: https://github.com/stuerp/foo_preview
-* Repository: https://github.com/stuerp/foo_preview.git
-* Issue tracker: https://github.com/stuerp/foo_preview/issues
+* Home page: https://github.com/stuerp/foo_previewer
+* Repository: https://github.com/stuerp/foo_previewer.git
+* Issue tracker: https://github.com/stuerp/foo_previewer/issues
 
 ## License
 

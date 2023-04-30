@@ -7,7 +7,7 @@
 
 #pragma comment(lib, "shlwapi") // StrCmpLogicalW
 
-constexpr GUID PreviewCommandGUID = GUID_PREVIEW_COMMAND;
+constexpr GUID PreviewCommandGUID = { 0xec19f550, 0x9ff2, 0x4a0c, { 0x8a, 0x61, 0x17, 0xcc, 0xcb, 0xa5, 0x26, 0xa2 } }; // {EC19F550-9FF2-4A0C-8A61-17CCCBA526A2}
 constexpr char PreviewCommandName[] = "Preview";
 constexpr char PreviewCommandDescription[] = "Starts preview playback mode.";
 

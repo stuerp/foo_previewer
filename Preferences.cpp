@@ -1,5 +1,5 @@
 
-/** $VER: Preferences.cpp (2022.12.11) P. Stuer **/
+/** $VER: Preferences.cpp (2023.07.01) P. Stuer **/
 
 #include "framework.h"
 
@@ -18,10 +18,10 @@ static constexpr const char StartTimeInSecDefaultValue[] = "0.0";
 static constexpr const char StartTimeAsPercentageDefaultValue[] = "50.0";
 static constexpr const char PreviewLengthInSecDefaultValue[] = "61.0";
 
-cfg_uint StartTimeTypeSetting(StartTimeTypeSettingGUID, StartTimeTypeDefaultValue);
-cfg_string StartTimeInSecSetting(StartTimeSettingInSecGUID, StartTimeInSecDefaultValue);
-cfg_string StartTimeAsPercentageSetting(StartTimeSettingAsPercentageGUID, StartTimeAsPercentageDefaultValue);
-cfg_string PreviewLengthInSecSetting(PreviewLengthInSecGUID, PreviewLengthInSecDefaultValue);
+static cfg_uint StartTimeTypeSetting(StartTimeTypeSettingGUID, StartTimeTypeDefaultValue);
+static cfg_string StartTimeInSecSetting(StartTimeSettingInSecGUID, StartTimeInSecDefaultValue);
+static cfg_string StartTimeAsPercentageSetting(StartTimeSettingAsPercentageGUID, StartTimeAsPercentageDefaultValue);
+static cfg_string PreviewLengthInSecSetting(PreviewLengthInSecGUID, PreviewLengthInSecDefaultValue);
 #pragma endregion
 
 /// <summary>
@@ -98,7 +98,6 @@ public:
     //WTL message map
     BEGIN_MSG_MAP_EX(Preferences)
         MSG_WM_INITDIALOG(OnInitDialog)
-//      MSG_WM_CTLCOLORDLG(OnDrawBackground)
         COMMAND_HANDLER_EX(IDC_START_TIME_TYPE, CBN_SELCHANGE, OnSelectionChanged)
         COMMAND_HANDLER_EX(IDC_START_TIME, EN_CHANGE, OnEditChange)
     END_MSG_MAP()
@@ -284,7 +283,7 @@ class PreferencesPage : public preferences_page_impl<Preferences>
 public:
     const char * get_name()
     {
-        return "Preview";
+        return "Previewer";
     }
 
     GUID get_guid()
