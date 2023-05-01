@@ -1,5 +1,5 @@
 
-/** $VER: Resources.rc (2022.12.11) P. Stuer **/
+/** $VER: Resources.rc (2023.05.01) P. Stuer **/
 
 #include "Resources.h"
 
@@ -12,7 +12,7 @@ language LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 IDD_PREFERENCES dialogex 0, 0, 332, 288
 style DS_SETFONT | WS_CHILD
-font 8, "MS Shell Dlg", 400, 0, 0x0
+font 8, "Segoe UI", 400, 0, 1
 {
     groupbox        "Start time",       IDC_STATIC,              7,  7, 139, 51
     combobox                            IDC_START_TIME_TYPE,    14, 19, 125, 14, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP 

@@ -78,9 +78,13 @@ branch. Pull requests are warmly welcome.
 
 ## Change Log
 
+### v1.1.0, 2023-xx-xx, *""*
+
+* The Preferences page is now DPI-aware.
+
 ### v1.0.1, 2023-04-30, *"There can be only one"*
 
-* Renamed the component to avoid being confused with [foo_preview](https://www.foobar2000.org/components/view/foo_preview) by grimes. Please manually uninstall the previous foo_preview component before installing this version to avoid having duplicated 'Preview' commands.
+* Renamed the component to avoid being confused with [foo_preview](https://www.foobar2000.org/components/view/foo_preview) by grimes. Please manually uninstall the previous foo_preview component before installing this version to avoid having duplicate 'Preview' commands.
 * Recompiled with [foobar2000 SDK](https://www.foobar2000.org/SDK) 2023-04-18.
 
 ### v1.0.0, 2022-11-01, *"Scratchin' the itch"*
