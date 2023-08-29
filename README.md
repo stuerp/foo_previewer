@@ -14,33 +14,33 @@
 
 ## Getting started
 
+### Installation
+
 * Double-click `foo_previewer.fbk2-component`.
 
 or
 
-* Import `foo_previewer.fbk2-component` into foobar2000 using "File / Preferences / Components / Install...".
+* Import `foo_previewer.fbk2-component` into foobar2000 using the "*File / Preferences / Components / Install...*" menu item.
 
-Configure the component using Preferences:
+### Configuration
+
+Use the Preferences page to set:
 
 * Start time type
-    * In seconds
-    * As percentage of track length
-    * Random
+  * In seconds
+  * As percentage of track length
+  * Random
 * Preview length in seconds
 
 ## Developing
 
-The code builds out-of-the box with Visual Studio 2022.
-
-### Requirements
-
 To build the code you need:
 
 * [Microsoft Visual Studio 2022 Community Edition](https://visualstudio.microsoft.com/downloads/) or later
-* [foobar2000 SDK](https://www.foobar2000.org/SDK) 2023-04-18
+* [foobar2000 SDK](https://www.foobar2000.org/SDK) 2023-05-10
 * [Windows Template Library (WTL)](https://github.com/Win32-WTL/WTL) 10.0.10320
 
-To create the deployment package:
+To create the deployment package you need:
 
 * [PowerShell 7.2](https://github.com/PowerShell/PowerShell) or later
 
@@ -81,6 +81,7 @@ branch. Pull requests are warmly welcome.
 ### v1.1.0, 2023-xx-xx, *""*
 
 * The Preferences page is now DPI-aware.
+* Recompiled with [foobar2000 SDK](https://www.foobar2000.org/SDK) 2023-05-10.
 
 ### v1.0.1, 2023-04-30, *"There can be only one"*
 
@@ -89,7 +90,7 @@ branch. Pull requests are warmly welcome.
 
 ### v1.0.0, 2022-11-01, *"Scratchin' the itch"*
 
-* Initial release
+* Initial release.
 
 ## Acknowledgements / Credits
 
@@ -102,9 +103,9 @@ branch. Pull requests are warmly welcome.
 
 * [foobar2000 Development](https://wiki.hydrogenaud.io/index.php?title=Foobar2000:Development:Overview)
 
-### Windows
+### Windows User Interface
 
-* [Desktop app user interface](https://learn.microsoft.com/en-us/windows/win32/windows-application-ui-development)
+* [Desktop App User Interface](https://learn.microsoft.com/en-us/windows/win32/windows-application-ui-development)
 * [Windows User Experience Interaction Guidelines](https://learn.microsoft.com/en-us/windows/win32/uxguide/guidelines)
 * [Windows Controls](https://learn.microsoft.com/en-us/windows/win32/controls/window-controls)
 * [Control Library](https://learn.microsoft.com/en-us/windows/win32/controls/individual-control-info)
@@ -113,9 +114,9 @@ branch. Pull requests are warmly welcome.
 
 ## Links
 
-* Home page: https://github.com/stuerp/foo_previewer
-* Repository: https://github.com/stuerp/foo_previewer.git
-* Issue tracker: https://github.com/stuerp/foo_previewer/issues
+* Home page: [https://github.com/stuerp/foo_previewer](https://github.com/stuerp/foo_previewer)
+* Repository: [https://github.com/stuerp/foo_previewer.git](https://github.com/stuerp/foo_previewer.git)
+* Issue tracker: [https://github.com/stuerp/foo_previewer/issues](https://github.com/stuerp/foo_previewer/issues)
 
 ## License
 

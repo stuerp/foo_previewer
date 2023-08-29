@@ -194,13 +194,9 @@
     <ClCompile Include="Commands.cpp" />
     <ClCompile Include="ContextMenuHandler.cpp" />
     <ClCompile Include="MenuHandler.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Component.cpp" />
     <ClCompile Include="PlaybackEventHandler.cpp" />
     <ClCompile Include="Preferences.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Build-FB2KComponent.ps1" />
-    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\sdk\foobar2000\foobar2000_component_client\foobar2000_component_client.vcxproj">
